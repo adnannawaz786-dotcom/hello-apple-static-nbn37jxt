@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hello Apple - A modern static website">
+    <meta name="author" content="Hello Apple Static">
+    <title>Hello Apple</title>
+    
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading screen -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loading-spinner">
+            <div class="apple-icon">🍎</div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+    
+    <!-- Background elements -->
+    <div class="background-elements" aria-hidden="true">
+        <div class="floating-apple floating-apple-1">🍎</div>
+        <div class="floating-apple floating-apple-2">🍏</div>
+        <div class="floating-apple floating-apple-3">🍎</div>
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <!-- Main content -->
+    <main id="main" class="main-container">
+        <!-- Header section -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="apple-logo" role="img" aria-label="Apple emoji">
+                    <span class="apple-emoji">🍎</span>
+                    <div class="apple-glow"></div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Hello</span>
+                    <span class="title-line title-apple">Apple</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Welcome to a beautifully crafted static experience
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="explore-btn" aria-describedby="explore-description">
+                        <span>Explore</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M4.16667 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="btn btn-secondary" id="learn-more-btn">
+                        <span>Learn More</span>
+                    </button>
+                </div>
+                
+                <div id="explore-description" class="sr-only">
+                    Click to explore interactive features of this Hello Apple website
+                </div>
+            </div>
+        </header>
+        
+        <!-- Features section -->
+        <section class="features-section" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section-title">Features</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card" tabindex="0">
+                        <div class="feature-icon" role="img" aria-label="Modern design">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Modern Design</h3>
+                        <p class="feature-description">Clean, contemporary interface with smooth animations and glass morphism effects.</p>
+                    </div>
+                    
+                    <div class="feature-card" tabindex="0">
+                        <div class="feature-icon" role="img" aria-label="Responsive layout">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" stroke-width="2"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Responsive</h3>
+                        <p class="feature-description">Mobile-first design that looks perfect on all devices and screen sizes.</p>
+                    </div>
+                    
+                    <div class="feature-card" tabindex="0">
+                        <div class="feature-icon" role="img" aria-label="Accessible">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="8.5" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 8V6C20 5.46957 19.7893 4.96086 19.4142 4.58579C19.0391 4.21071 18.5304 4 18 4C17.4696 4 16.9609 4.21071 16.5858 4.58579C16.2107 4.96086 16 5.46957 16 6V8" stroke="currentColor" stroke-width="2"/>
+                                <rect x="16" y="8" width="4" height="5" rx="1" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Accessible</h3>
+                        <p class="feature-description">Built with accessibility in mind, ensuring everyone can enjoy the experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive section -->
+        <section class="interactive-section" id="interactive" aria-labelledby="interactive-title">
+            <div class="container">
+                <h2 id="interactive-title" class="section-title">Interactive Elements</h2>
+                
+                <div class="interactive-demo">
+                    <div class="demo-card glass-card">
+                        <h3>Click Counter</h3>
+                        <div class="counter-display">
+                            <span id="counter-value" class="counter-number">0</span>
+                            <span class="counter-label">clicks</span>
+                        </div>
+                        <button class="btn btn-primary" id="counter-btn" aria-describedby="counter-description">
+                            Click Me! 🍎
+                        </button>
+                        <div id="counter-description" class="sr-only">
+                            Button to increment the click counter
+                        </div>
+                    </div>
+                    
+                    <div class="demo-card glass-card">
+                        <h3>Color Theme</h3>
+                        <div class="theme-selector">
+                            <button class="theme-btn" data-theme="default" aria-label="Default theme">
+                                <div class="theme-preview theme-default"></div>
+                            </button>
+                            <button class="theme-btn" data-theme="green" aria-label="Green apple theme">
+                                <div class="theme-preview theme-green"></div>
+                            </button>
+                            <button class="theme-btn" data-theme="red" aria-label="Red apple theme">
+                                <div class="theme-preview theme-red"></div>
+                            </button>
+                            <button class="theme-btn" data-theme="purple" aria-label="Purple theme">
+                                <div class="theme-preview theme-purple"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">🍎</span>
+                    <span class="footer-text">Hello Apple</span>
+                </div>
+                
+                <div class="footer-info">
+                    <p>&copy; 2024 Hello Apple Static. Made with ❤️</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast notification -->
+    <div id="toast" class="toast" role="alert" aria-live="polite" aria-atomic="true">
+        <div class="toast-content">
+            <span class="toast-icon">🍎</span>
+            <span class="toast-message"></span>
+        </div>
+        <button class="toast-close" aria-label="Close notification">&times;</button>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Hello Apple",
+        "description": "A modern static website displaying Hello Apple message",
+        "url": window.location.href
+    }
+    </script>
+</body>
+</html>
